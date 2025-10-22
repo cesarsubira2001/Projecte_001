@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - GeneradorIA</title>
+    <link rel="stylesheet" href="../CSS/styless.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1>Generador<span>IA</span></h1>
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <a href="../Caracteristica/Caracteristica.html"
+                >Características</a
+              >
+            </li>
+            <li><a href="../Precios/precios.html">Precios</a></li>
+            <li>
+              <a href="../Contacto/Contacto.html" class="active">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="../Login/Login.html" class="btn btn-secondary"
+            >Iniciar Sesión</a
+          >
+          <a href="../Register/Register.html" class="btn btn-primary"
+            >Registrarse</a
+          >
+        </div>
+        <div class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section Contacto -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="contact-hero-content">
+          <h1>Contáctanos</h1>
+          <p>
+            ¿Tienes alguna pregunta? Nos encantaría saber de ti. Envíanos un
+            mensaje y te responderemos lo antes posible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Principal de Contacto -->
+    <section class="contact-main">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Información de Contacto -->
+          <div class="contact-info">
+            <h2>Información de Contacto</h2>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p>soporte@generadoria.com</p>
+                  <p>ventas@generadoria.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                  <h3>Teléfono</h3>
+                  <p>+52 (55) 1234 5678</p>
+                  <p>+52 (55) 8765 4321</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h3>Oficina</h3>
+                  <p>Av. Reforma 123</p>
+                  <p>Ciudad de México, 06600</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="contact-icon">🕒</div>
+                <div class="contact-details">
+                  <h3>Horario de Atención</h3>
+                  <p>Lunes - Viernes: 9:00 - 18:00</p>
+                  <p>Sábados: 9:00 - 14:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de Contacto -->
+          <div class="contact-form-container">
+            <h2>Envíanos un Mensaje</h2>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="nombre"
+                  >Nombre <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control"
+                  required
+                />
+                <span class="error-message" id="nombreError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email"
+                  >Correo Electrónico <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+                <span class="error-message" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="asunto"
+                  >Asunto <span class="required">*</span></label
+                >
+                <select id="asunto" name="asunto" class="form-control" required>
+                  <option value="">Selecciona un asunto</option>
+                  <option value="soporte">Soporte Técnico</option>
+                  <option value="ventas">Consultas de Ventas</option>
+                  <option value="empresas">Cuentas Empresariales</option>
+                  <option value="sugerencias">Sugerencias</option>
+                  <option value="otros">Otros</option>
+                </select>
+                <span class="error-message" id="asuntoError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono (Opcional)</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje"
+                  >Mensaje <span class="required">*</span></label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  class="form-control"
+                  rows="5"
+                  required
+                ></textarea>
+                <span class="error-message" id="mensajeError"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="terms-group">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <label for="newsletter"
+                    >Deseo recibir noticias y actualizaciones por correo
+                    electrónico</label
+                  >
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary contact-submit-btn">
+                <span class="btn-text">Enviar Mensaje</span>
+                <span class="btn-loading" style="display: none"
+                  >Enviando...</span
+                >
+              </button>
+
+              <div class="form-feedback" id="formFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 GeneradorIA. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Validación del formulario de contacto
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const submitBtn = contactForm.querySelector(".contact-submit-btn");
+        const btnText = submitBtn.querySelector(".btn-text");
+        const btnLoading = submitBtn.querySelector(".btn-loading");
+
+        // Elementos del formulario
+        const nombreInput = document.getElementById("nombre");
+        const emailInput = document.getElementById("email");
+        const asuntoInput = document.getElementById("asunto");
+        const mensajeInput = document.getElementById("mensaje");
+
+        // Elementos de error
+        const nombreError = document.getElementById("nombreError");
+        const emailError = document.getElementById("emailError");
+        const asuntoError = document.getElementById("asuntoError");
+        const mensajeError = document.getElementById("mensajeError");
+        const formFeedback = document.getElementById("formFeedback");
+
+        // Validación en tiempo real
+        nombreInput.addEventListener("blur", validateNombre);
+        emailInput.addEventListener("blur", validateEmail);
+        asuntoInput.addEventListener("change", validateAsunto);
+        mensajeInput.addEventListener("blur", validateMensaje);
+
+        // Envío del formulario
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (validateForm()) {
+            submitForm();
+          }
+        });
+
+        function validateNombre() {
+          const nombre = nombreInput.value.trim();
+          if (nombre === "") {
+            showError(nombreError, "El nombre es obligatorio");
+            return false;
+          } else if (nombre.length < 2) {
+            showError(
+              nombreError,
+              "El nombre debe tener al menos 2 caracteres"
+            );
+            return false;
+          } else {
+            hideError(nombreError);
+            return true;
+          }
+        }
+
+        function validateEmail() {
+          const email = emailInput.value.trim();
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (email === "") {
+            showError(emailError, "El correo electrónico es obligatorio");
+            return false;
+          } else if (!emailRegex.test(email)) {
+            showError(
+              emailError,
+              "Por favor ingresa un correo electrónico válido"
+            );
+            return false;
+          } else {
+            hideError(emailError);
+            return true;
+          }
+        }
+
+        function validateAsunto() {
+          const asunto = asuntoInput.value;
+          if (asunto === "") {
+            showError(asuntoError, "Por favor selecciona un asunto");
+            return false;
+          } else {
+            hideError(asuntoError);
+            return true;
+          }
+        }
+
+        function validateMensaje() {
+          const mensaje = mensajeInput.value.trim();
+          if (mensaje === "") {
+            showError(mensajeError, "El mensaje es obligatorio");
+            return false;
+          } else if (mensaje.length < 10) {
+            showError(
+              mensajeError,
+              "El mensaje debe tener al menos 10 caracteres"
+            );
+            return false;
+          } else {
+            hideError(mensajeError);
+            return true;
+          }
+        }
+
+        function validateForm() {
+          const isNombreValid = validateNombre();
+          const isEmailValid = validateEmail();
+          const isAsuntoValid = validateAsunto();
+          const isMensajeValid = validateMensaje();
+
+          return (
+            isNombreValid && isEmailValid && isAsuntoValid && isMensajeValid
+          );
+        }
+
+        function showError(element, message) {
+          element.textContent = message;
+          element.style.display = "block";
+        }
+
+        function hideError(element) {
+          element.textContent = "";
+          element.style.display = "none";
+        }
+
+        function submitForm() {
+          // Mostrar estado de carga
+          btnText.style.display = "none";
+          btnLoading.style.display = "inline";
+          submitBtn.disabled = true;
+
+          // Simular envío (en un caso real, aquí harías una petición AJAX)
+          setTimeout(function () {
+            // Mostrar mensaje de éxito
+            showFeedback(
+              "¡Mensaje enviado con éxito! Te contactaremos pronto.",
+              "success"
+            );
+
+            // Resetear formulario
+            contactForm.reset();
+
+            // Restaurar botón
+            btnText.style.display = "inline";
+            btnLoading.style.display = "none";
+            submitBtn.disabled = false;
+
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(function () {
+              hideFeedback();
+            }, 5000);
+          }, 2000);
+        }
+
+        function showFeedback(message, type) {
+          formFeedback.textContent = message;
+          formFeedback.className = "form-feedback " + type;
+          formFeedback.style.display = "block";
+        }
+
+        function hideFeedback() {
+          formFeedback.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
