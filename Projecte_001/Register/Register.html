@@ -1,70 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro - Generador de IA</title>
-    <link rel="stylesheet" href="../CSS/styless.css" /> 
-</head>
-<body class="register-body">
+    <link rel="stylesheet" href="../CSS/styless.css" />
+  </head>
+  <body class="register-body">
     <div class="register-container">
-        <div class="register-header">
-            <h2>Crear Cuenta</h2>
-            <p>Únete a nuestra comunidad de IA</p>
+      <div class="register-header">
+        <h2>Crear Cuenta</h2>
+        <p>Únete a nuestra comunidad de IA</p>
+      </div>
+
+      <form class="register-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellido</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              placeholder="Tu apellido"
+              required
+            />
+          </div>
         </div>
-        
-        <form class="register-form">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="firstName">Nombre</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="Tu nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="lastName">Apellido</label>
-                    <input type="text" id="lastName" class="form-control" placeholder="Tu apellido" required>
-                </div>
-            </div>
-            
-            <div class="form-group full-width">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" class="form-control" placeholder="tu@email.com" required>
-            </div>
-            
-            <div class="form-group full-width">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" class="form-control" placeholder="Crea una contraseña segura" required>
-                <div class="password-strength">
-                    <div class="strength-bar" id="passwordStrength"></div>
-                </div>
-                <div class="password-requirements">
-                    La contraseña debe tener al menos 8 caracteres, incluir mayúsculas, minúsculas y números.
-                </div>
-            </div>
-            
-            <div class="form-group full-width">
-                <label for="confirmPassword">Confirmar Contraseña</label>
-                <input type="password" id="confirmPassword" class="form-control" placeholder="Repite tu contraseña" required>
-            </div>
-            
-            <div class="terms-group">
-                <input type="checkbox" id="terms" required>
-                <label for="terms">
-                    Acepto los <a href="#" class="terms-link">Términos de Servicio</a> y la 
-                    <a href="#" class="terms-link">Política de Privacidad</a>
-                </label>
-            </div>
-            
-            <div class="terms-group">
-                <input type="checkbox" id="newsletter">
-                <label for="newsletter">
-                    Deseo recibir noticias y actualizaciones sobre nuevas funciones de IA
-                </label>
-            </div>
-            
-            <button type="submit" class="register-btn" id="registerBtn">Crear Cuenta</button>
-            
-            <div class="register-divider">
+
+        <div class="form-group full-width">
+          <label for="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            placeholder="tu@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-group full-width">
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="Ingresa tu contraseña (mín. 8 caracteres, letras y números)"
+            required
+          />
+          <div class="password-strength">
+            <div class="strength-bar" id="passwordStrength"></div>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="confirmPassword">Confirmar Contraseña</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            class="form-control"
+            placeholder="Repite tu contraseña"
+            required
+          />
+        </div>
+
+        <div class="terms-group">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">
+            Acepto los <a href="#" class="terms-link">Términos de Servicio</a> y
+            la
+            <a href="#" class="terms-link">Política de Privacidad</a>
+          </label>
+        </div>
+
+        <div class="terms-group">
+          <input type="checkbox" id="newsletter" />
+          <label for="newsletter">
+            Deseo recibir noticias y actualizaciones sobre nuevas funciones de
+            IA
+          </label>
+        </div>
+
+        <button type="submit" class="register-btn" id="registerBtn">
+          Crear Cuenta
+        </button>
+
+        <!-- <div class="register-divider">
                 <span>O regístrate con</span>
             </div>
             
@@ -77,81 +107,84 @@
                     <span class="social-icon">🔒</span>
                     GitHub
                 </button>
-            </div>
-            
-            <div class="login-link">
-                ¿Ya tienes una cuenta? <a href="../Login/Login.html">Inicia sesión aquí</a>
-            </div>
-        </form>
+            </div> -->
+
+        <div class="login-link">
+          ¿Ya tienes una cuenta?
+          <a href="../Login/Login.html">Inicia sesión aquí</a>
+        </div>
+      </form>
     </div>
 
     <script>
-        // Validación de contraseña en tiempo real
-        const passwordInput = document.getElementById('password');
-        const passwordStrength = document.getElementById('passwordStrength');
-        const confirmPasswordInput = document.getElementById('confirmPassword');
-        const registerBtn = document.getElementById('registerBtn');
-        
-        passwordInput.addEventListener('input', function() {
-            const password = this.value;
-            let strength = 0;
-            
-            // Longitud mínima
-            if (password.length >= 8) strength += 1;
-            
-            // Contiene mayúsculas y minúsculas
-            if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) strength += 1;
-            
-            // Contiene números
-            if (password.match(/([0-9])/)) strength += 1;
-            
-            // Contiene caracteres especiales
-            if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) strength += 1;
-            
-            // Actualizar barra de fortaleza
-            passwordStrength.className = 'strength-bar';
-            if (strength <= 1) {
-                passwordStrength.classList.add('strength-weak');
-            } else if (strength <= 3) {
-                passwordStrength.classList.add('strength-medium');
-            } else {
-                passwordStrength.classList.add('strength-strong');
-            }
-        });
-        
-        // Validar que las contraseñas coincidan
-        confirmPasswordInput.addEventListener('input', function() {
-            const password = passwordInput.value;
-            const confirmPassword = this.value;
-            
-            if (confirmPassword && password !== confirmPassword) {
-                this.style.borderColor = 'var(--accent-color)';
-            } else {
-                this.style.borderColor = '';
-            }
-        });
-        
-        // Validar formulario antes de enviar
-        document.querySelector('.register-form').addEventListener('submit', function(e) {
-            const password = passwordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
-            const termsChecked = document.getElementById('terms').checked;
-            
-            if (password !== confirmPassword) {
-                e.preventDefault();
-                alert('Las contraseñas no coinciden. Por favor, verifica.');
-                return;
-            }
-            
-            if (!termsChecked) {
-                e.preventDefault();
-                alert('Debes aceptar los Términos de Servicio para continuar.');
-                return;
-            }
-            
-            // Aquí normalmente enviarías el formulario
-            alert('¡Cuenta creada exitosamente! Redirigiendo...');
+      // Validación de contraseña en tiempo real
+      const passwordInput = document.getElementById("password");
+      const passwordStrength = document.getElementById("passwordStrength");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+      const registerBtn = document.getElementById("registerBtn");
+
+      passwordInput.addEventListener("input", function () {
+        const password = this.value;
+        let strength = 0;
+
+        // Longitud mínima
+        if (password.length >= 8) strength += 1;
+
+        // Contiene mayúsculas y minúsculas
+        if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) strength += 1;
+
+        // Contiene números
+        if (password.match(/([0-9])/)) strength += 1;
+
+        // Contiene caracteres especiales
+        if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) strength += 1;
+
+        // Actualizar barra de fortaleza
+        passwordStrength.className = "strength-bar";
+        if (strength <= 1) {
+          passwordStrength.classList.add("strength-weak");
+        } else if (strength <= 3) {
+          passwordStrength.classList.add("strength-medium");
+        } else {
+          passwordStrength.classList.add("strength-strong");
+        }
+      });
+
+      // Validar que las contraseñas coincidan
+      confirmPasswordInput.addEventListener("input", function () {
+        const password = passwordInput.value;
+        const confirmPassword = this.value;
+
+        if (confirmPassword && password !== confirmPassword) {
+          this.style.borderColor = "var(--accent-color)";
+        } else {
+          this.style.borderColor = "";
+        }
+      });
+
+      // Validar formulario antes de enviar
+      document
+        .querySelector(".register-form")
+        .addEventListener("submit", function (e) {
+          const password = passwordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+          const termsChecked = document.getElementById("terms").checked;
+
+          if (password !== confirmPassword) {
+            e.preventDefault();
+            alert("Las contraseñas no coinciden. Por favor, verifica.");
+            return;
+          }
+
+          if (!termsChecked) {
+            e.preventDefault();
+            alert("Debes aceptar los Términos de Servicio para continuar.");
+            return;
+          }
+
+          // Aquí normalmente enviarías el formulario
+          alert("¡Cuenta creada exitosamente! Redirigiendo...");
         });
     </script>
-</body>
+  </body>
 </html>

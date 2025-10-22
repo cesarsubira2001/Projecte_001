@@ -417,14 +417,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 2px 0; /* 40px arriba y abajo */
 }
 
 .register-container {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  width: 100%;
   max-width: 500px;
   overflow: hidden;
 }
@@ -462,7 +461,7 @@ ul {
 }
 
 .form-group.full-width {
-  flex: 0 0 100%;
+  flex: 0 0 90%;
 }
 
 .form-group label {
@@ -644,116 +643,670 @@ ul {
 
 /* Aqui acaba el CSS del Registro */
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header .container {
-    flex-wrap: wrap;
+/* Aqui empieza el CSS de Características */
+
+/* Hero Section para Características */
+.features-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.features-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.features-hero-content p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sección Principal de Características */
+.main-features {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.feature-category {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.feature-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--light-color);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.category-header h2 {
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.category-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--light-color);
+  transition: var(--transition);
+}
+
+.feature-item:hover {
+  background-color: rgba(108, 99, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.feature-item h3 {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Sección de Comparativa */
+.features-comparison {
+  padding: 80px 0;
+  background: white;
+}
+
+.features-comparison h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+}
+
+.comparison-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: var(--dark-color);
+  color: white;
+  font-weight: 600;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-column,
+.plan-column {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-column {
+  font-weight: 600;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.plan-column {
+  text-align: center;
+  justify-content: center;
+}
+
+.table-row:nth-child(even) .plan-column {
+  background-color: #f8f9fa;
+}
+
+/* CTA Section */
+.features-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--dark-color) 0%, #1a1a2e 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Estilos para enlace activo en navegación */
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Aqui acaba el CSS de Características */
+
+/* Aqui empieza el CSS de Precios CORREGIDO */
+
+/* Hero Section para Precios */
+.pricing-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de tarjetas de precios - 4 COLUMNAS */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas */
+  gap: 25px; /* Reducido el gap para que quepan 4 */
+  max-width: 1300px; /* Aumentado el max-width */
+  margin: 60px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+}
+
+/* Ajustar el tamaño de las tarjetas para 4 columnas */
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px; /* Reducido padding */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 2px solid transparent;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Ajustar tamaños de texto para 4 columnas */
+.pricing-card h3 {
+  font-size: 1.5rem; /* Reducido */
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pricing-card .price {
+  font-size: 2.5rem; /* Reducido */
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.pricing-card .price-period {
+  font-size: 0.9rem; /* Reducido */
+  color: #666;
+  font-weight: 500;
+}
+
+.features-list li {
+  padding: 10px 0; /* Reducido */
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 25px; /* Reducido */
+  color: #555;
+  font-size: 0.9rem; /* Reducido */
+}
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Botones en las tarjetas */
+.pricing-card .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.pricing-card .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+/* Aqui acaba el CSS de Precios */
+
+/* Aqui empieza el CSS de Precios CORREGIDO */
+
+/* Hero Section para Precios */
+.pricing-section {
+  padding: 20px 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de tarjetas de precios - 4 COLUMNAS MEJORADO */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  align-items: stretch;
+}
+
+/* Tarjetas individuales de precios optimizadas */
+.pricing-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 500px;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Popular */
+.pricing-card.popular {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  transform: scale(1.02);
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.02) translateY(-8px);
+}
+
+.pricing-card.popular::before {
+  content: "🔥 MÁS POPULAR";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Encabezado de la tarjeta */
+.pricing-card h3 {
+  font-size: 1.4rem;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pricing-card .price-container {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 15px 0;
+  position: relative;
+}
+
+/* Precio */
+.pricing-card .price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  display: block;
+  line-height: 1;
+}
+
+.pricing-card .price-period {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Lista de características optimizada */
+.features-list {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.features-list li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+  top: 8px;
+}
+
+/* Para características con emojis en el plan Free */
+.features-list li:contains("✅"),
+.features-list li:contains("❌") {
+  padding-left: 0;
+}
+
+.features-list li:contains("✅")::before,
+.features-list li:contains("❌")::before {
+  content: none;
+}
+
+/* Botones en las tarjetas */
+.pricing-card .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.pricing-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: var(--text-light);
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE PARA PRECIOS */
+@media (max-width: 1200px) {
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
   }
 
-  .navbar {
-    width: 100%;
-    order: 3;
-    margin-top: 15px;
-    display: none;
+  .pricing-card {
+    min-height: 450px;
+    padding: 30px 25px;
   }
 
-  .navbar.active {
-    display: block;
+  .pricing-card.popular {
+    transform: none;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
-
-  .header-actions {
-    display: none;
-  }
-
-  .hero .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content h2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  /* Responsive para login */
-  .login-container {
-    max-width: 100%;
-  }
-
-  .login-form {
-    padding: 20px;
-  }
-
-  .login-options {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .social-login {
-    flex-direction: column;
-  }
-
-  /* Responsive para registro */
-  .register-container {
-    max-width: 100%;
-  }
-
-  .register-form {
-    padding: 20px;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .social-register {
-    flex-direction: column;
+  .pricing-card.popular:hover {
+    transform: translateY(-8px);
   }
 }
 
-/* Responsive adicional para móviles más pequeños */
-@media (max-width: 480px) {
-  .hero-content h2 {
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+    max-width: 400px;
+  }
+
+  .pricing-card {
+    padding: 25px 20px;
+    min-height: auto;
+  }
+
+  .pricing-card .price {
     font-size: 2rem;
   }
 
-  .hero-content p {
+  .pricing-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .pricing-card.popular {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
     font-size: 1rem;
   }
 
-  .login-header {
-    padding: 20px 15px;
+  .pricing-card h3 {
+    font-size: 1.3rem;
   }
 
-  .login-header h2 {
-    font-size: 1.5rem;
+  .pricing-card .price {
+    font-size: 1.8rem;
   }
 
-  .register-header {
-    padding: 20px 15px;
+  .features-list li {
+    font-size: 0.8rem;
+    padding: 6px 0;
+    padding-left: 22px;
   }
 
-  .register-header h2 {
-    font-size: 1.5rem;
+  .footer {
+    padding: 30px 0;
+    margin-top: 60px;
   }
 }
+/* Aqui acaba el CSS de Precios CORREGIDO */
+ 

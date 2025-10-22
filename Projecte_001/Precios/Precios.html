@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/styless.css" />
+    <title>Precios - Generador de IA</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1>Generador<span>IA</span></h1>
+        </div>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <a href="../Caracteristica/Caracteristica.html"
+                >Características</a
+              >
+            </li>
+            <li>
+              <a href="../Precios/precios.html" class="active">Precios</a>
+            </li>
+            <li><a href="../Contacto/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="../Login/Login.html" class="btn btn-secondary"
+            >Iniciar Sesión</a
+          >
+          <a href="../Register/Register.html" class="btn btn-primary"
+            >Registrarse</a
+          >
+        </div>
+        <div class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!-- Contenido de Precios -->
+    <main>
+      <section class="pricing-section">
+        <div class="container">
+          <h2 class="section-title">Nuestros Planes de Precios</h2>
+          <p class="section-subtitle">
+            Elige el plan perfecto para tus necesidades. Sin compromisos, sin
+            sorpresas.
+          </p>
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <h3>Plan Básico</h3>
+              <div class="price-container">
+                <span class="price">$9.99</span>
+                <span class="price-period">/mes</span>
+              </div>
+              <ul class="features-list">
+                <li>Acceso limitado a funciones de IA</li>
+                <li>Generación de hasta 1000 palabras por mes</li>
+                <li>Soporte por correo electrónico</li>
+              </ul>
+              <a href="../Register/Register.html" class="btn btn-primary"
+                >Seleccionar Plan</a
+              >
+            </div>
+            <div class="pricing-card popular">
+              <h3>Plan Pro</h3>
+              <div class="price-container">
+                <span class="price">$29.99</span>
+                <span class="price-period">/mes</span>
+              </div>
+              <ul class="features-list">
+                <li>Acceso completo a todas las funciones de IA</li>
+                <li>Generación ilimitada de palabras</li>
+                <li>Soporte prioritario 24/7</li>
+                <li>Acceso a nuevas características antes que nadie</li>
+              </ul>
+              <a href="../Register/Register.html" class="btn btn-primary"
+                >Seleccionar Plan</a
+              >
+            </div>
+            <div class="pricing-card">
+              <h3>Plan Empresarial</h3>
+              <div class="price-container">
+                <span class="price">Personalizado</span>
+                <span class="price-period">consulta</span>
+              </div>
+              <ul class="features-list">
+                <li>Soluciones personalizadas para tu empresa</li>
+                <li>Integración dedicada y soporte técnico</li>
+                <li>Capacitación para tu equipo</li>
+              </ul>
+              <a href="../Contacto/contacto.html" class="btn btn-primary"
+                >Contáctanos</a
+              >
+            </div>
+            <div class="pricing-card free-plan">
+              <h3>🎁 Plan Free</h3>
+              <div class="price-container">
+                <span class="price">Gratis</span>
+                <span class="price-period">para siempre</span>
+              </div>
+              <ul class="features-list">
+                <li>Generación de hasta 500 palabras por mes</li>
+                <li>Acceso a plantillas básicas de IA</li>
+                <li>Soporte por correo electrónico</li>
+                <li>5 proyectos simultáneos</li>
+                <li>Sin acceso a funciones avanzadas</li>
+                <li>Sin soporte prioritario</li>
+              </ul>
+              <a href="../Register/Register.html" class="btn btn-primary"
+                >Comenzar Gratis</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 GeneradorIA. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu functionality
+      document
+        .querySelector(".mobile-menu-btn")
+        .addEventListener("click", function () {
+          document.querySelector(".navbar").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>
