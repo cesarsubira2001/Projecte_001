@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styless.css">
+    <title>Pagar - GeneradorIA</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Generador<span>IA</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Caracteristica/Caracteristica.html">Características</a></li>
+                    <li><a href="../Precios/precios.html">Precios</a></li>
+                    <li><a href="../Contacto/Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../Login/Login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="../Register/Register.html" class="btn btn-primary">Registrarse</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section Pago -->
+    <section class="payment-hero">
+        <div class="container">
+            <div class="payment-hero-content">
+                <h1>Finalizar Compra</h1>
+                <p>Estás a un paso de acceder a todas las funciones premium de GeneradorIA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Principal de Pago -->
+    <section class="payment-main">
+        <div class="container">
+            <div class="payment-wrapper">
+                <!-- Resumen del Pedido -->
+                <div class="order-summary">
+                    <h2>Resumen del Pedido</h2>
+                    <div class="selected-plan">
+                        <div class="plan-header">
+                            <h3>Plan Pro</h3>
+                            <span class="plan-price">$29.99/mes</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✓ Acceso completo a todas las funciones de IA</li>
+                            <li>✓ Generación ilimitada de palabras</li>
+                            <li>✓ Soporte prioritario 24/7</li>
+                            <li>✓ Acceso anticipado a nuevas características</li>
+                            <li>✓ 5 usuarios incluidos</li>
+                            <li>✓ Exportación en múltiples formatos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="order-details">
+                        <div class="detail-row">
+                            <span>Subtotal:</span>
+                            <span>$29.99</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Impuestos (16%):</span>
+                            <span>$4.80</span>
+                        </div>
+                        <div class="detail-row total">
+                            <span>Total:</span>
+                            <span>$34.79</span>
+                        </div>
+                    </div>
+
+                    <div class="security-badges">
+                        <div class="badge">
+                            <span>🔒</span>
+                            <span>Pago 100% Seguro</span>
+                        </div>
+                        <div class="badge">
+                            <span>🛡️</span>
+                            <span>SSL Encriptado</span>
+                        </div>
+                        <div class="badge">
+                            <span>💳</span>
+                            <span>Pagos Protegidos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Pago -->
+                <div class="payment-form-container">
+                    <h2>Información de Pago</h2>
+                    <form class="payment-form" id="paymentForm">
+                        <!-- Información Personal -->
+                        <div class="form-section">
+                            <h3>Información Personal</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                                    <span class="error-message" id="nombreError"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Información de Pago -->
+                        <div class="form-section">
+                            <h3>Método de Pago</h3>
+                            
+                            <!-- Selección de Método de Pago -->
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="card">
+                                    <input type="radio" name="paymentMethod" id="card" checked>
+                                    <label for="card">
+                                        <span class="method-icon">💳</span>
+                                        Tarjeta de Crédito/Débito
+                                    </label>
+                                </div>
+                                <div class="payment-method" data-method="paypal">
+                                    <input type="radio" name="paymentMethod" id="paypal">
+                                    <label for="paypal">
+                                        <span class="method-icon">🔵</span>
+                                        PayPal
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Formulario de Tarjeta -->
+                            <div class="card-form" id="cardForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Número de Tarjeta <span class="required">*</span></label>
+                                        <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                                        <span class="error-message" id="cardNumberError"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardName">Nombre en la Tarjeta <span class="required">*</span></label>
+                                        <input type="text" id="cardName" name="cardName" class="form-control">
+                                        <span class="error-message" id="cardNameError"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Fecha de Expiración <span class="required">*</span></label>
+                                        <input type="text" id="expiryDate" name="expiryDate" class="form-control" placeholder="MM/AA" maxlength="5">
+                                        <span class="error-message" id="expiryDateError"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV <span class="required">*</span></label>
+                                        <input type="text" id="cvv" name="cvv" class="form-control" placeholder="123" maxlength="3">
+                                        <span class="error-message" id="cvvError"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Formulario PayPal (oculto por defecto) -->
+                            <div class="paypal-form" id="paypalForm" style="display: none;">
+                                <div class="paypal-info">
+                                    <p>Serás redirigido a PayPal para completar tu pago de manera segura.</p>
+                                    <div class="paypal-logo">
+                                        <span>🔵</span>
+                                        <span>PayPal</span>
+                                    </div>
+                                    <!-- Botón de PayPal -->
+                                    <div id="paypal-button-container"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Términos y Condiciones -->
+                        <div class="form-section">
+                            <div class="terms-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">
+                                    Acepto los <a href="#" class="terms-link">Términos de Servicio</a> y la 
+                                    <a href="#" class="terms-link">Política de Privacidad</a> <span class="required">*</span>
+                                </label>
+                            </div>
+                            <span class="error-message" id="termsError"></span>
+
+                            <div class="terms-group">
+                                <input type="checkbox" id="subscription" name="subscription" checked>
+                                <label for="subscription">
+                                    Renovación automática mensual. Puedes cancelar en cualquier momento.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Botón de Pago para Tarjeta -->
+                        <button type="submit" class="btn btn-primary payment-submit-btn" id="cardPaymentBtn">
+                            <span class="btn-text">Pagar $34.79</span>
+                            <span class="btn-loading" style="display: none;">Procesando pago...</span>
+                        </button>
+
+                        <div class="form-feedback" id="formFeedback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GeneradorIA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SDK de PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    <script src="../JS/pago.js"></script>
+</body>
+</html>

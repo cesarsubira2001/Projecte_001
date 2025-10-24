@@ -1309,387 +1309,945 @@ ul {
   }
 }
 /* Aqui acaba el CSS de Precios CORREGIDO */
-/*  Aqui comença el CSS de Contacte */ 
+/*  Aqui comença el CSS de Contacte */
 /* Aqui comienza el CSS de Contacto */
 
 /* Hero Section para Contacto */
 .contact-hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-    background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
 }
 
 .contact-hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 800;
-    position: relative;
-    z-index: 1;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-hero-content p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Sección Principal de Contacto */
 .contact-main {
-    padding: 80px 0;
-    background-color: var(--light-color);
+  padding: 80px 0;
+  background-color: var(--light-color);
 }
 
 .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
 }
 
 /* Información de Contacto */
 .contact-info h2 {
-    color: var(--dark-color);
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 700;
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .contact-methods {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .contact-method {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 25px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .contact-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .contact-icon {
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .contact-details h3 {
-    color: var(--dark-color);
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .contact-details p {
-    color: #666;
-    margin-bottom: 5px;
-    line-height: 1.5;
+  color: #666;
+  margin-bottom: 5px;
+  line-height: 1.5;
 }
 
 /* Formulario de Contacto */
 .contact-form-container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
 }
 
 .contact-form-container h2 {
-    color: var(--dark-color);
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-align: center;
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contact-form .form-group {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--dark-color);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
 }
 
 .required {
-    color: #ff4757;
+  color: #ff4757;
 }
 
 .contact-form .form-control {
-    width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: var(--transition);
-    font-family: inherit;
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+  font-family: inherit;
 }
 
 .contact-form .form-control:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
 }
 
 .contact-form textarea.form-control {
-    resize: vertical;
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
 
 .contact-form select.form-control {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 16px;
-    padding-right: 45px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 45px;
 }
 
 .error-message {
-    color: #ff4757;
-    font-size: 0.85rem;
-    margin-top: 5px;
-    display: block;
-    min-height: 20px;
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+  min-height: 20px;
 }
 
 .contact-form .terms-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .contact-form .terms-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--primary-color);
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
 }
 
 .contact-form .terms-group label {
-    margin-bottom: 0;
-    font-weight: normal;
-    font-size: 0.95rem;
-    color: #666;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 .contact-submit-btn {
-    width: 100%;
-    padding: 16px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transition);
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-submit-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    transform: none;
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .contact-submit-btn:not(:disabled):hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 .form-feedback {
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 15px;
-    display: none;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 15px;
+  display: none;
 }
 
 .form-feedback.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    display: block;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
 }
 
 .form-feedback.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    display: block;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
 }
 
 /* FAQ Section */
 .contact-faq {
-    padding: 80px 0;
-    background: white;
+  padding: 80px 0;
+  background: white;
 }
 
 .contact-faq h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--dark-color);
-    margin-bottom: 50px;
-    font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .faq-item {
-    background: var(--light-color);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+  background: var(--light-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .faq-item h3 {
-    color: var(--dark-color);
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .faq-item p {
-    color: #666;
-    line-height: 1.6;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .contact-info {
-        order: 2;
-    }
-    
-    .contact-form-container {
-        order: 1;
-    }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info {
+    order: 2;
+  }
+
+  .contact-form-container {
+    order: 1;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-hero {
-        padding: 80px 0;
-    }
-    
-    .contact-hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .contact-hero-content p {
-        font-size: 1.1rem;
-    }
-    
-    .contact-main {
-        padding: 60px 0;
-    }
-    
-    .contact-form-container {
-        padding: 30px 25px;
-    }
-    
-    .contact-method {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .contact-icon {
-        align-self: center;
-    }
-    
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-faq h2 {
-        font-size: 2rem;
-    }
+  .contact-hero {
+    padding: 80px 0;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .contact-main {
+    padding: 60px 0;
+  }
+
+  .contact-form-container {
+    padding: 30px 25px;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contact-icon {
+    align-self: center;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-faq h2 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .contact-hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .contact-form-container {
-        padding: 25px 20px;
-    }
-    
-    .contact-info h2,
-    .contact-form-container h2 {
-        font-size: 1.6rem;
-    }
-    
-    .contact-method {
-        padding: 15px;
-    }
-    
-    .contact-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form-container {
+    padding: 25px 20px;
+  }
+
+  .contact-info h2,
+  .contact-form-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-method {
+    padding: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
 }
 
 /* Aqui acaba el CSS de Contacto */
+/* Aqui comienza el CSS de Pago */
+
+/* Hero Section para Pago */
+.payment-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
+}
+
+.payment-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.payment-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sección Principal de Pago */
+.payment-main {
+  padding: 60px 0;
+  background-color: var(--light-color);
+  min-height: calc(100vh - 400px);
+}
+
+.payment-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Resumen del Pedido */
+.order-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 100px;
+}
+
+.order-summary h2 {
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid var(--light-color);
+  padding-bottom: 15px;
+}
+
+.selected-plan {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 2px solid var(--primary-color);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.plan-header h3 {
+  color: var(--dark-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.plan-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.plan-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan-features li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.order-details {
+  border-top: 2px solid var(--light-color);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: #666;
+}
+
+.detail-row.total {
+  border-top: 2px solid var(--light-color);
+  margin-top: 10px;
+  padding-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.security-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid var(--light-color);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Formulario de Pago */
+.payment-form-container {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.payment-form-container h2 {
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid var(--light-color);
+  padding-bottom: 15px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.form-section h3 {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.payment-form .form-group {
+  margin-bottom: 0;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+}
+
+.required {
+  color: #ff4757;
+}
+
+.payment-form .form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.payment-form .form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.payment-form .form-control::placeholder {
+  color: #999;
+}
+
+.error-message {
+  color: #ff4757;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+  min-height: 20px;
+}
+
+/* Métodos de Pago */
+.payment-methods {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.payment-method {
+  flex: 1;
+  position: relative;
+}
+
+.payment-method input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+}
+
+.payment-method.active label {
+  border-color: var(--primary-color);
+  background: rgba(108, 99, 255, 0.05);
+}
+
+.payment-method:hover label {
+  border-color: var(--primary-color);
+}
+
+.method-icon {
+  font-size: 1.2rem;
+}
+
+/* Formularios específicos de pago */
+.card-form,
+.paypal-form {
+  margin-top: 15px;
+}
+
+.paypal-info {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  border: 2px dashed #e1e1e1;
+}
+
+.paypal-info p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.paypal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003087;
+}
+
+/* Términos y condiciones */
+.payment-form .terms-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.payment-form .terms-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+  margin-top: 3px;
+}
+
+.payment-form .terms-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.terms-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.terms-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Botón de pago */
+.payment-submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.payment-submit-btn:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.form-feedback {
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 15px;
+  display: none;
+}
+
+.form-feedback.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.form-feedback.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .payment-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .order-summary {
+    position: static;
+    order: 2;
+  }
+
+  .payment-form-container {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-hero {
+    padding: 60px 0;
+  }
+
+  .payment-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .payment-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .payment-main {
+    padding: 40px 0;
+  }
+
+  .payment-form-container {
+    padding: 25px 20px;
+  }
+
+  .order-summary {
+    padding: 25px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .payment-form-container,
+  .order-summary {
+    padding: 20px 15px;
+  }
+
+  .plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+}
+/* Estilos específicos para PayPal */
+.btn-paypal {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-paypal:hover {
+  transform: translateY(-2px);
+  transition: var(--transition);
+}
+
+/* Ocultar botón de tarjeta cuando PayPal está activo */
+.payment-submit-btn[style*="display: none"] {
+  display: none !important;
+}
+
+/* Estilos para el contenedor de PayPal */
+#paypal-button-container {
+  margin-top: 20px;
+}
+
+/* Mejoras visuales para el método PayPal */
+.paypal-info {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  border-radius: 10px;
+  border: 2px solid #e1e1e1;
+}
+
+.paypal-info p {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.paypal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003087;
+  margin-bottom: 20px;
+}
+
+/* Responsive para PayPal */
+@media (max-width: 768px) {
+  .paypal-info {
+    padding: 20px 15px;
+  }
+
+  .paypal-logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Aqui acaba el CSS de Pago */
