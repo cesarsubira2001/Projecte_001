@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión - Generador de IA</title>
-    <!-- Ruta hacia la carpeta CSS -->
     <link rel="stylesheet" href="../CSS/styless.css" />
-  </head>
-  <body class="login-body">
+</head>
+<body class="login-body">
     <div class="login-container">
-      <div class="login-header">
-        <h2>Iniciar Sesión</h2>
-        <p>Accede a tu cuenta de Generador IA</p>
-      </div>
-
-      <form class="login-form">
-        <div class="form-group">
-          <label for="email">Correo Electrónico</label>
-          <input
-            type="email"
-            id="email"
-            class="form-control"
-            placeholder="tu@email.com"
-            required
-          />
+        <div class="login-header">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede a tu cuenta de Generador IA</p>
         </div>
 
-        <div class="form-group">
-          <label for="password">Contraseña</label>
-          <input
-            type="password"
-            id="password"
-            class="form-control"
-            placeholder="Tu contraseña"
-            required
-          />
-        </div>
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="tu@email.com"
+                    required
+                />
+            </div>
 
-        <div class="login-options">
-          <div class="remember-me">
-            <input type="checkbox" id="remember" />
-            <label for="remember">Recordarme</label>
-          </div>
-          <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-        </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Tu contraseña"
+                    required
+                />
+            </div>
 
-        <button type="submit" class="login-btn">Iniciar Sesión</button>
+            <div class="login-options">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" />
+                    <label for="remember">Recordarme</label>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
 
-        <div class="login-divider">
-          <span>O continúa con</span>
-        </div>
+            <button type="submit" class="login-btn">Iniciar Sesión</button>
 
-        <div class="social-login">
-          <button type="button" class="social-btn">
-            <span class="social-icon">📱</span>
-            Google
-          </button>
-          <button type="button" class="social-btn">
-            <span class="social-icon">🔒</span>
-            GitHub
-          </button>
-        </div>
+            <div class="login-divider">
+                <span>O continúa con</span>
+            </div>
 
-        <div class="register-link">
-          ¿No tienes una cuenta? <a href="../Register/Register.html">Regístrate aquí</a>
-        </div>
-      </form>
+            <div class="social-login">
+                <a href="http://localhost:5000/auth/google" class="social-btn google-btn">
+                    <span class="social-icon">🔵</span>
+                    Google
+                </a>
+                <a href="http://localhost:5000/auth/github" class="social-btn github-btn">
+                    <span class="social-icon">🐙</span>
+                    GitHub
+                </a>
+            </div>
+
+            <div class="register-link">
+                ¿No tienes una cuenta? <a href="../Register/Register.html">Regístrate aquí</a>
+            </div>
+        </form>
     </div>
-  </body>
+
+    <script>
+        // Verificar parámetros de URL para mensajes de éxito/error
+        const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
+        const error = urlParams.get('error');
+
+        if (loginStatus === 'success') {
+            alert('¡Inicio de sesión exitoso! Redirigiendo...');
+            // Aquí podrías redirigir al dashboard
+            setTimeout(() => {
+                window.location.href = '../Dashboard/dashboard.html';
+            }, 1000);
+        }
+
+        if (error === 'auth_failed') {
+            alert('Error en la autenticación. Intenta nuevamente.');
+        }
+
+        // Manejar login con email/password (para desarrollo)
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            alert('En un entorno real, esto conectaría con el backend. Por ahora usa Google o GitHub.');
+        });
+    </script>
+</body>
 </html>
